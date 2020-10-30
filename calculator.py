@@ -39,12 +39,12 @@ window.title("My Calculator - 15615013 김준혁")
 
 ## 입력 및 출력부
 entry_value = StringVar(window, value='')
-display = Entry(window, width=45, bg="yellow", textvariable=entry_value, justify='right')
+display = Entry(window, width=55, bg="yellow", textvariable=entry_value, justify='right')
 display.grid(row=0, column=0, columnspan=5)
 
 
 ## 계산기 버튼부
-btn_width = 8
+btn_width = 10
 num_list = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
 
 ### 숫자 버튼 추가
