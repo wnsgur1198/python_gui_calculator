@@ -20,7 +20,10 @@ Python Version:
 
 * complete: GUI calculator using python
     * UI 및 계산 기능 구현 완료
-   
+
+* fix: entry, button width
+    * 입력창 및 버튼 크기 수정
+
 
 ## Meta
 
