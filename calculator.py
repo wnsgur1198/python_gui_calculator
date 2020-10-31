@@ -7,7 +7,7 @@ from tkinter import *
 
 ## 숫자 및 연산자 입력  
 def input_value(v):
-    display.insert('end',v)
+    display.insert(0,v)
 
 
 ## 계산 수행
@@ -16,7 +16,7 @@ def calculate():
     if value != '':
         result = eval(value)
         clear_entry()
-        display.insert('end', result)
+        display.insert(0, result)
 
 ### Enter키 발생 시 calculate() 호출
 def calculate_enter(event):
@@ -38,8 +38,7 @@ window.title("My Calculator - 15615013 김준혁")
 
 
 ## 입력 및 출력부
-entry_value = StringVar(window, value='')
-display = Entry(window, width=55, bg="yellow", textvariable=entry_value, justify='right')
+display = Entry(window, width=55, bg="yellow", justify='right')
 display.grid(row=0, column=0, columnspan=5)
 
 
@@ -67,7 +66,6 @@ Button(window, text=op_list[2], width=btn_width, command=lambda:input_value(op_l
 Button(window, text=op_list[3], width=btn_width, command=lambda:input_value(op_list[3])).grid(row=1, column=3)
 
 ### 기타 버튼(초기화, 소수점, 계산요청) 추가
-btn_list = ['C', '.', '=']
 Button(window, text='C', width=btn_width, command=clear_entry).grid(row=1, column=4)
 Button(window, text='.', width=btn_width, command=lambda:input_value('.')).grid(row=4, column=1)
 Button(window, text='=', width=btn_width, command=calculate).grid(row=4, column=2)
